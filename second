@@ -1,0 +1,19 @@
+/*输入三角形三条边边长，输出三角形的面积。*/
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    float a,b,c,l,x,s;
+    printf("输入三角形三条边边长\n");
+    printf("a:");
+    scanf("%f",&a);
+    printf("b:");
+    scanf("%f",&b);
+    printf("c:");
+    scanf("%f",&c);
+    l=(a+b+c)/2;
+    x=l*(l-a)*(l-b)*(l-c);
+    s=sqrt(x);
+    printf("三角形面积是；%f\n",s);
+    return 0;
+}
