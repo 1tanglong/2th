@@ -1,0 +1,31 @@
+/*输入年月日，求是该年的第几周第几天*/
+#include<stdio.h>
+int main(void)
+{
+int month,year,day,sum,week,i=0;
+printf("输入年 月 日:\n");
+scanf("%d %d %d",&year,&month,&day);
+switch(month)
+{
+case 12: i=i+30;
+case 11: i=i+31;
+case 10: i=i+30;
+case 9: i=i+31;
+case 8: i=i+31;
+case 7: i=i+30;
+case 6: i=i+31;
+case 5: i=i+30;
+case 4: i=i+31;
+case 3: i=i+28;
+case 2: i=i+31;
+case 1: ;
+default:
+;
+}
+sum=i+day;
+if(((year%4==0&&year%100!=0)||(year%400==0))&&(month>2))
+sum=sum+1;
+week=sum/7;
+printf("这天是%d年的第%d周第%d天\n",year,week,sum);
+}
+
